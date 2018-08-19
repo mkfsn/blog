@@ -1,3 +1,3 @@
-# mkfsn.github.io/blog
+# Blog
 
 [https://mkfsn.github.io/blog](https://mkfsn.github.io/blog)
