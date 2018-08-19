@@ -192,6 +192,14 @@ canonifyurls = true
   # they have to be referred from static root. Example
   # [[params.customJS]]
   #   src = "js/myscript.js"
+  [[params.customJS]]
+    src = "js/highlight.js/9.4.0/languages/go.min.js"
+  [[params.customJS]]
+    src = "js/highlight.js/9.4.0/languages/typescript.min.js"
+  [[params.customJS]]
+    src = "js/highlight.js/9.4.0/languages/yaml.min.js"
+  [[params.customJS]]
+    src = "js/highlight.js/9.4.0/languages/scss.min.js"
 
   # Display `Next` on left side of the pagination, and `Prev` on right side one.
   # If you set this value to `true`, these positions swap.
