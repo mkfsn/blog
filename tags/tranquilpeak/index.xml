@@ -6,10 +6,22 @@
     <description>Recent content in Tranquilpeak on mkfsn&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Aug 2018 15:25:40 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Aug 2018 16:36:19 +0800</lastBuildDate>
     
 	<atom:link href="https://mkfsn.github.io/blog/tags/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>tranquilpeak 主題中 Golang 沒有 Highlight</title>
+      <link>https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/</link>
+      <pubDate>Sun, 19 Aug 2018 16:36:19 +0800</pubDate>
+      
+      <guid>https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/</guid>
+      <description>&lt;p&gt;身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
+tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>用 Hugo 來架設部落格並部署到 Github Pages</title>
