@@ -1,0 +1,796 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.47 with theme Tranquilpeak 0.4.3-BETA">
+    <title>tranquilpeak 主題中 Golang 沒有 Highlight</title>
+    <meta name="author" content="mkfsn">
+    <meta name="keywords" content="tech">
+
+    <link rel="icon" href="https://mkfsn.github.io/blog/favicon.png">
+    
+
+    
+    <meta name="description" content="身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
+tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。
+
+">
+    <meta property="og:description" content="身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
+tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。
+
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="tranquilpeak 主題中 Golang 沒有 Highlight">
+    <meta property="og:url" content="/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+    <meta property="og:site_name" content="mkfsn&#39;s blog">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="mkfsn&#39;s blog">
+    <meta name="twitter:description" content="身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
+tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。
+
+">
+    
+      <meta name="twitter:creator" content="@mkfsn">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="//www.gravatar.com/avatar/e480b3bf5ba1a0ef7b184d9d47ae5403?s=640">
+    
+
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://mkfsn.github.io/blog/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-124207676-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://mkfsn.github.io/blog/">mkfsn&#39;s blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://mkfsn.github.io/blog/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="//www.gravatar.com/avatar/e480b3bf5ba1a0ef7b184d9d47ae5403?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://mkfsn.github.io/blog/#about">
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/e480b3bf5ba1a0ef7b184d9d47ae5403?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">mkfsn</h4>
+        
+          <h5 class="sidebar-profile-bio">FullStack | Gopher</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://mkfsn.github.io/blog/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://mkfsn.github.io/blog/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://mkfsn.github.io/blog/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://mkfsn.github.io/blog/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://mkfsn.github.io/blog/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/mkfsn" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://glasnostic.com/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Glasnostic</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/mkfsn/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/6214626/mkfsn" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://mkfsn.github.io/blog/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      tranquilpeak 主題中 Golang 沒有 Highlight
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-08-19T16:36:19&#43;08:00">
+        
+  August 19, 2018
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
+tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。</p>
+
+<p></p>
+
+<p>tranquilpeak 中 highlight 的方式有兩種：</p>
+
+<ol>
+<li>highlight.js</li>
+<li>prism.js (似乎在實驗中)</li>
+</ol>
+
+<p>但是 highlight.js 預設沒有 golang，只有包含一些“常見”的語法</p>
+
+<p><a href="https://github.com/highlightjs/highlight.js/issues/1218">https://github.com/highlightjs/highlight.js/issues/1218</a></p>
+
+<p>從 highlight.js 官網也可以看到 golang 沒有在 common 裡面：</p>
+
+<p><a href="https://highlightjs.org/download/">https://highlightjs.org/download/</a></p>
+
+<p>所以必須要另外去 include cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js</p>
+
+<p>這通常意味著要去修改 theme 的程式碼。</p>
+
+<p>所幸 tranquilpeak 有方法可以去載入其他 JavaScript</p>
+
+<h1 id="params-customjs">params.customJS</h1>
+
+<p>在 config.toml 裡面，有提供 params.customJS 可以去 import 額外的 JavaScript，可
+以是 CDN 的 URL，也可以是 static folder 中的 local file。</p>
+
+<p>在這邊我是先把我要的 highlight 抓下來放到 static/js/ 資料夾裡面</p>
+
+
+  
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">$ mkdir -p static/js/highlight.js/9.4.0/languages
+
+# 這邊我抓了 go, typescript, yaml, scss
+$ wget https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js -P static/js/highlight.js/9.4.0/languages
+$ wget https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/typescript.min.js -P static/js/highlight.js/9.4.0/languages
+$ wget https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/yaml.min.js -P static/js/highlight.js/9.4.0/languages
+$ wget https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/scss.min.js -P static/js/highlight.js/9.4.0/languages</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>然後修改設定檔</p>
+
+
+  
+  
+  
+  
+
+
+<figure class="highlight ini language-ini">
+  <figcaption>
+    
+      <span>config.toml</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-ini"><code class="ini">  # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
+  # they have to be referred from static root. Example
+  [[params.customJS]]
+    src = &#34;js/highlight.js/9.4.0/languages/go.min.js&#34;
+  [[params.customJS]]
+    src = &#34;js/highlight.js/9.4.0/languages/typescript.min.js&#34;
+  [[params.customJS]]
+    src = &#34;js/highlight.js/9.4.0/languages/yaml.min.js&#34;
+  [[params.customJS]]
+    src = &#34;js/highlight.js/9.4.0/languages/scss.min.js&#34;</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<h1 id="成果">成果</h1>
+
+
+  
+  
+  
+  
+
+
+<figure class="highlight go language-go">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-go"><code class="go">package main
+
+import &#34;fmt&#34;
+
+func main() {
+    fmt.Println(&#34;Hello world&#34;)
+}</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://mkfsn.github.io/blog/tags/hugo/">hugo</a>
+
+  <a class="tag tag--primary tag--small" href="https://mkfsn.github.io/blog/tags/tranquilpeak/">tranquilpeak</a>
+
+  <a class="tag tag--primary tag--small" href="https://mkfsn.github.io/blog/tags/highlight/">highlight</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://mkfsn.github.io/blog/2018/08/%E7%94%A8-hugo-%E4%BE%86%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%A6%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/" data-tooltip="用 Hugo 來架設部落格並部署到 Github Pages">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 mkfsn. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://mkfsn.github.io/blog/2018/08/%E7%94%A8-hugo-%E4%BE%86%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%A6%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/" data-tooltip="用 Hugo 來架設部落格並部署到 Github Pages">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmkfsn.github.io%2Fblog%2F2018%2F08%2Ftranquilpeak-%25E4%25B8%25BB%25E9%25A1%258C%25E4%25B8%25AD-golang-%25E6%25B2%2592%25E6%259C%2589-highlight%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fmkfsn.github.io%2Fblog%2F2018%2F08%2Ftranquilpeak-%25E4%25B8%25BB%25E9%25A1%258C%25E4%25B8%25AD-golang-%25E6%25B2%2592%25E6%259C%2589-highlight%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fmkfsn.github.io%2Fblog%2F2018%2F08%2Ftranquilpeak-%25E4%25B8%25BB%25E9%25A1%258C%25E4%25B8%25AD-golang-%25E6%25B2%2592%25E6%259C%2589-highlight%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/e480b3bf5ba1a0ef7b184d9d47ae5403?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">mkfsn</h4>
+    
+      <div id="about-card-bio">FullStack | Gopher</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/">
+                <h3 class="media-heading">tranquilpeak 主題中 Golang 沒有 Highlight</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
+tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://mkfsn.github.io/blog/2018/08/%E7%94%A8-hugo-%E4%BE%86%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%A6%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/">
+                <h3 class="media-heading">用 Hugo 來架設部落格並部署到 Github Pages</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>最近將服務都移過去 linode 上面，因為受限於選擇的方案儲存空間不夠，所以把腦筋動到
+<username>.github.io 上面 &hellip;</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         2 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://mkfsn.github.io/blog/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://mkfsn.github.io/blog/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+  
+    <script src="https://mkfsn.github.io/blog/js/highlight.js/9.4.0/languages/go.min.js"></script>
+  
+
+  
+    <script src="https://mkfsn.github.io/blog/js/highlight.js/9.4.0/languages/typescript.min.js"></script>
+  
+
+  
+    <script src="https://mkfsn.github.io/blog/js/highlight.js/9.4.0/languages/yaml.min.js"></script>
+  
+
+  
+    <script src="https://mkfsn.github.io/blog/js/highlight.js/9.4.0/languages/scss.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/mkfsn.github.io\/blog\/2018\/08\/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight\/';
+          
+            this.page.identifier = '\/2018\/08\/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'mkfsn';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
