@@ -12,20 +12,29 @@
     
     
     <item>
-      <title>Tag1</title>
-      <link>https://mkfsn.github.io/blog/tags/tag1/</link>
+      <title>Github</title>
+      <link>https://mkfsn.github.io/blog/tags/github/</link>
       <pubDate>Sun, 19 Aug 2018 15:25:40 +0800</pubDate>
       
-      <guid>https://mkfsn.github.io/blog/tags/tag1/</guid>
+      <guid>https://mkfsn.github.io/blog/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Tag2</title>
-      <link>https://mkfsn.github.io/blog/tags/tag2/</link>
+      <title>Hugo</title>
+      <link>https://mkfsn.github.io/blog/tags/hugo/</link>
       <pubDate>Sun, 19 Aug 2018 15:25:40 +0800</pubDate>
       
-      <guid>https://mkfsn.github.io/blog/tags/tag2/</guid>
+      <guid>https://mkfsn.github.io/blog/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tranquilpeak</title>
+      <link>https://mkfsn.github.io/blog/tags/tranquilpeak/</link>
+      <pubDate>Sun, 19 Aug 2018 15:25:40 +0800</pubDate>
+      
+      <guid>https://mkfsn.github.io/blog/tags/tranquilpeak/</guid>
       <description></description>
     </item>
     

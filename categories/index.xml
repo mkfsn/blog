@@ -11,20 +11,11 @@
     
     
     <item>
-      <title>Category</title>
-      <link>https://mkfsn.github.io/blog/categories/category/</link>
+      <title>Programming</title>
+      <link>https://mkfsn.github.io/blog/categories/programming/</link>
       <pubDate>Sun, 19 Aug 2018 15:25:40 +0800</pubDate>
       
-      <guid>https://mkfsn.github.io/blog/categories/category/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Subcategory</title>
-      <link>https://mkfsn.github.io/blog/categories/subcategory/</link>
-      <pubDate>Sun, 19 Aug 2018 15:25:40 +0800</pubDate>
-      
-      <guid>https://mkfsn.github.io/blog/categories/subcategory/</guid>
+      <guid>https://mkfsn.github.io/blog/categories/programming/</guid>
       <description></description>
     </item>
     
