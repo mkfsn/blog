@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on mkfsn&#39;s blog</title>
+    <link>https://mkfsn.github.io/blog/categories/</link>
+    <description>Recent content in Categories on mkfsn&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://mkfsn.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Category</title>
+      <link>https://mkfsn.github.io/blog/categories/category/</link>
+      <pubDate>Sun, 19 Aug 2018 15:25:40 +0800</pubDate>
+      
+      <guid>https://mkfsn.github.io/blog/categories/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Subcategory</title>
+      <link>https://mkfsn.github.io/blog/categories/subcategory/</link>
+      <pubDate>Sun, 19 Aug 2018 15:25:40 +0800</pubDate>
+      
+      <guid>https://mkfsn.github.io/blog/categories/subcategory/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
