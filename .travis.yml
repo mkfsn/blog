@@ -8,7 +8,7 @@ go:
 
 env:
   global:
-    - secure: "Wr5IBql2Pn7sH0Bi/MzvNM1s98/te+1sfwQH0JMgL+CTKNBt/5nDw9g7JARSqQCO3AvLjYBwBpkD0sSjo7dXf6To3DuYNpWhJDDEqraZezreI+iu1hEWwMeIPVV9y9FAHxaBKvtXOp7jPA/3gvhjIcBHZJpWrQn7QiMMI94f1ondqqdaEi0s4j2lBf0M1UzFxY5PBY4rouhSW2AVgJmL+MU7HdgGHhIPl7lua2RgE8CKVo1z+JtyA5aObvV1befqpNAQiRB3wm5VV4BAV/zgC7v3SU5o3Ig1mj8uIhFxuFk4k1GZCtbwaxpYLYzlOOg0v5hgvcvyQuERupY9y6Q8z8v+Adk3Mw9oJe8zrYR38s8eucfe11/hi0hJmevKNL9YnYu7vZBqCFFloOukVceIxh8ElIBM6OlAmpCNB6/NDXumyBHXhBoPgRwkuxcS7tLZXSR9+17M6buIsWvrJsjPG7xUgCZlwp5De1LEGdLlqmimLZybVkdLnvaJseKDyrV093tvQtSq/fEaUKdsQpo0uCxFq3kPzT3Q0rfaoqQHGaZzAeFb2a3jS8rptzcChaHsnUu61f44SfphfFMiio0DSNGmfNSWAbHdjsZsoLlSi+55QHgDMCpc65WuLq/Tr+tfkDrZHHz9+uoPK+1Y/J4Tla3OK8d3sXaPK3zN3qa0jJw="
+    - secure: "PM5fzZ83I1Y+t2edVqQJwvNs7B+7ITGmFTYGlYl7pJGT+8nX07L5o8DI0nGQxE3MrpnZNBS+lRIiJ/R+AC3PI3zCN+fJbPSJH9+IlPii1Kw0bKsRLeup49daDqnVTcsOxLY6qkrLcVwzcSlp6DTOxlSulQwk4zZRG4Uc0OvqsNm1zWaCVn+qUc0b9IlGhtONbhCy1WH4r6ZrN0C0NruptGRrdZMWv2BpygzcPMuS1FQieH9xDkyh7OJYHqroArYlO3lv2HomF0bzQgL+i2zmZ4J6zLpXDfWVQAW0voWXIf3n34F2jhcAC9Efpnq/PMN755FPTgk/+YDVI3IoJthq/lHzPorfLC6pCaW1V7Zhm4s/rp+RAEPXH6p386CCxaXr2x5/tz16daURkkl58ix/IUMMs2MGd9FWHoCslT0WqsEF1H5sf+nFG6tYxxd6dwpzf9KC7p1paXQtu952gKXGi4DioInaJ1R+G+HbSOsFxJiHhDB6Tk8I+Ypohc1ynNX6e9rfIBJhNm6RH4kdJu+1e4MK9dzG1GUomZoh2hUTSradQAwdcKn1sa4EzIHIz2+TwXbyOAXJTofPCr5UN0es/NMLk8Ek38KxvRd0LTLlNWnYnml7UC41IfciHooYrEK+3RIw3eJ6vFMWNxsvrPvV0Rx2MPWcU2tb5YtO9UBnpLg="
     - GITHUB_REPO: "$GIT_USER/$GIT_REPO"
 
 before_install:
@@ -23,14 +23,17 @@ before_script:
   # git
   - git clone "https://github.com/$GITHUB_REPO.git" --branch gh-pages public
 
-script: hugo
+script:
+  - echo $GIT_EMAIL
+  - echo $GIT_NAME
+  - hugo
 
 after_success:
   - cd public
   - git add --all
   - git commit -m "Publishing to gh-pages from Travis `date`"
   - cd ..
-  - git push --force --quiet "https://$GIT_USER:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
+  - git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
 
 branches:
   only:
