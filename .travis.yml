@@ -8,8 +8,8 @@ go:
 
 env:
   global:
-    - secure: "PM5fzZ83I1Y+t2edVqQJwvNs7B+7ITGmFTYGlYl7pJGT+8nX07L5o8DI0nGQxE3MrpnZNBS+lRIiJ/R+AC3PI3zCN+fJbPSJH9+IlPii1Kw0bKsRLeup49daDqnVTcsOxLY6qkrLcVwzcSlp6DTOxlSulQwk4zZRG4Uc0OvqsNm1zWaCVn+qUc0b9IlGhtONbhCy1WH4r6ZrN0C0NruptGRrdZMWv2BpygzcPMuS1FQieH9xDkyh7OJYHqroArYlO3lv2HomF0bzQgL+i2zmZ4J6zLpXDfWVQAW0voWXIf3n34F2jhcAC9Efpnq/PMN755FPTgk/+YDVI3IoJthq/lHzPorfLC6pCaW1V7Zhm4s/rp+RAEPXH6p386CCxaXr2x5/tz16daURkkl58ix/IUMMs2MGd9FWHoCslT0WqsEF1H5sf+nFG6tYxxd6dwpzf9KC7p1paXQtu952gKXGi4DioInaJ1R+G+HbSOsFxJiHhDB6Tk8I+Ypohc1ynNX6e9rfIBJhNm6RH4kdJu+1e4MK9dzG1GUomZoh2hUTSradQAwdcKn1sa4EzIHIz2+TwXbyOAXJTofPCr5UN0es/NMLk8Ek38KxvRd0LTLlNWnYnml7UC41IfciHooYrEK+3RIw3eJ6vFMWNxsvrPvV0Rx2MPWcU2tb5YtO9UBnpLg="
-    - GITHUB_REPO: "$GIT_USER/$GIT_REPO"
+    secure: 'Y2CW43227jL/+r10CyFt93hSM4irXj8YfL8v/rASr9g37c5YdQyrcGR4kozuBC1mDAsqVJ4e7I1nZxcYELzFpXq405S4eG1tD9qdbAQcdnfaj8JunN6wPbOLWLflVvHCmhDZ2mbj208D5MkAHm24cFdf/HOp7F822iUSGRhGs3bO15H5KrIpQi+C0nvaLcX+eh830Hfb1vlOSMKS+aKM//DOUsxYKoHyuOEyvkKJxa4Qi1HFEkLMKrUxQK3qF4CQfq1YkJ+eIx4BkHi7KTSmNq3hq24uo4r/iqa1kNXzmvOGIN/u8TruUmAHBn0GuxKqy7H9ZeGHbyRmF8NJRKBv3ytFhBJfe8UU40tSPndoM6QmZgx/ihqs50a5Hi/n8JEzMdTrhD6g4EJfyaqG8rYXMGsQLd5g/cyG2lSD1cd1WmalxDuG3xbvmcTYWGxpWPigt9maZ709BU2TKon24TOT31bsfCZ5tEdtT1qvqoriW9aLxR7ccSV+AnY77vU63EkWAaEApudsv6751dEZo5ms2oNSfQ5DTXZndbSuyfZn6wOX0A8pBq9sqytr/oPEmw+lSKI6Q57LaWo9TjYtofRYQDA4nfWQ0W5D/3BewyOXeghYgdzrE8vl81iHRJYuWkKMnW+hCPAEW+5pzOgjd+Qfbo468B2J2i96VWFgUJH29A0='
+    GITHUB_REPO: "$GIT_USER/$GIT_REPO"
 
 before_install:
   # git config
@@ -21,9 +21,13 @@ before_install:
 
 before_script:
   # git
+  - echo $GITHUB_REPO
+  - echo $GIT_NAME
+  - echo $GIT_USER
+  - echo $GIT_REPO
   - git clone "https://github.com/$GITHUB_REPO.git" --branch gh-pages public
 
-script: echo $GIT_EMAIL $GIT_NAME && hugo
+script: hugo
 
 after_success:
   - cd public
