@@ -14,14 +14,11 @@ before_install:
   - git config --global user.name "$GIT_NAME"
   - git config --global push.default simple
   # go dependencies
-  - go mod download
+  - GO111MODULE=on go mod download
 
 before_script:
   # git
-  - git clone "https://github.com/${GITHUB_REPO}.git"
-  - cd blog
-  # git worktree
-  - git worktree add -B gh-pages public origin/gh-pages
+  - git clone "https://github.com/${GITHUB_REPO}.git" --branch gh-pages public
 
 scripts:
   - hugo
