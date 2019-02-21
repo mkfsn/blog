@@ -21,11 +21,7 @@ before_install:
 
 before_script:
   # git
-  - echo $GITHUB_REPO
-  - echo $GIT_NAME
-  - echo $GIT_USER
-  - echo $GIT_REPO
-  - git clone "https://github.com/$GITHUB_REPO.git" --branch gh-pages public
+  - git worktree add -b gh-pages public origin/gh-pages
 
 script: hugo
 
@@ -34,7 +30,7 @@ after_success:
   - git add --all
   - git commit -m "Publishing to gh-pages from Travis `date`"
   - cd ..
-  - git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
+  - git push --force --quiet "https://$GIT_USER:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
 
 branches:
   only:
