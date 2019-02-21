@@ -1,17 +1,24 @@
 language: go
 
+os:
+  - linux
+
 go:
 - "1.11"
 
 env:
   global:
-    - GITHUB_REPO: "mkfsn/blog"
+    - GIT_NAME: "Pei-Ming Wu"
+    - GIT_USER: "mkfsn"
+    - GIT_REPO: "blog"
+    - GIT_EMAIL: "p408865@gmail.com"
+    - GITHUB_REPO: "${GIT_USER}/${GIT_REPO}"
     - secret: "adCJp+r8zduEtLwsZSBDgdQb5i8WkNXsh7M+y2OhIgTmSqBkM3VaNqojnOWzHhRfRtz+Rwy2rawJYzDA7NESghtYvRx93MG8VXOIqRY1fdAvN8HFeZygvzMh9SQ58I+QRhzFO+vtL49fTA9aT/aPcANfWKseFBaxUUudtQq4a4rNWW4fpfVpgiGX7HIEI9rx5VDb7wYplPeB4KpnlTWFku0uNcLYmVrk1GY+Vq7UZCVQ7xpIJ/CfKPMCtq2knKnDcqf03/fgoC5oFNDYPlen7LJV1DAdnpePoUXp/LxUJDm2ZEchwuGSop/Kit1/sm3DVhvvoR3spEvx0EMZ6BEYY8zqrpUsd703ng6VOAJbstSgWb0hKR++Cc/ngFlDhj2QLTKY3T+6o4Ff/0zqeHwpjKOO0k5R0O4wbLLC9RibhTuTr2cxj+UxTjwgjRKtgxJZDlD9Nve3GVvSiwwrTxtsZdOak3QNPbINPGyjIJ8bW1R0Xi/ylGqDiTmzYiu9pRy6eeZW/3T8tYe1i9qyjs+/TWXmLuB8mbv1wHzmji+e4p7ChwrfwHkQog75WXKPM8XEdw12Gr6vHmNPcLrUbetu7tkDVAxBcyxO9z7u7KCvJiRqvzAHt+GYm+jNnjQ4hDR4CI7anUAu4tRqveEjKxatJ2u9PVN60TRTlCupEo8XWUE="
 
 before_install:
   # git config
-  - git config --global user.email "$GIT_EMAIL"
-  - git config --global user.name "$GIT_NAME"
+  - git config --global user.email ${GIT_EMAIL}
+  - git config --global user.name ${GIT_NAME}
   - git config --global push.default simple
   # go dependencies
   - GO111MODULE=on go get github.com/gohugoio/hugo
@@ -27,7 +34,7 @@ after_success:
   - git add --all
   - git commit -m "Publishing to gh-pages `date`"
   - cd ..
-  - git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" origin gh-pages > /dev/null 2>&1
+  - git push --force --quiet "https://${GIT_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" origin gh-pages > /dev/null 2>&1
 
 branches:
   only:
