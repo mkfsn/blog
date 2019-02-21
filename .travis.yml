@@ -4,16 +4,16 @@ os:
   - linux
 
 go:
-- "1.11"
+  - '1.11'
 
 env:
   global:
-    - GIT_NAME: "Pei-Ming Wu"
-    - GIT_USER: "mkfsn"
-    - GIT_REPO: "blog"
-    - GIT_EMAIL: "p408865@gmail.com"
+    - GIT_NAME: Pei-Ming Wu
+    - GIT_USER: mkfsn
+    - GIT_REPO: blog
+    - GIT_EMAIL: p408865@gmail.com
     - GITHUB_REPO: "${GIT_USER}/${GIT_REPO}"
-    - secret: "adCJp+r8zduEtLwsZSBDgdQb5i8WkNXsh7M+y2OhIgTmSqBkM3VaNqojnOWzHhRfRtz+Rwy2rawJYzDA7NESghtYvRx93MG8VXOIqRY1fdAvN8HFeZygvzMh9SQ58I+QRhzFO+vtL49fTA9aT/aPcANfWKseFBaxUUudtQq4a4rNWW4fpfVpgiGX7HIEI9rx5VDb7wYplPeB4KpnlTWFku0uNcLYmVrk1GY+Vq7UZCVQ7xpIJ/CfKPMCtq2knKnDcqf03/fgoC5oFNDYPlen7LJV1DAdnpePoUXp/LxUJDm2ZEchwuGSop/Kit1/sm3DVhvvoR3spEvx0EMZ6BEYY8zqrpUsd703ng6VOAJbstSgWb0hKR++Cc/ngFlDhj2QLTKY3T+6o4Ff/0zqeHwpjKOO0k5R0O4wbLLC9RibhTuTr2cxj+UxTjwgjRKtgxJZDlD9Nve3GVvSiwwrTxtsZdOak3QNPbINPGyjIJ8bW1R0Xi/ylGqDiTmzYiu9pRy6eeZW/3T8tYe1i9qyjs+/TWXmLuB8mbv1wHzmji+e4p7ChwrfwHkQog75WXKPM8XEdw12Gr6vHmNPcLrUbetu7tkDVAxBcyxO9z7u7KCvJiRqvzAHt+GYm+jNnjQ4hDR4CI7anUAu4tRqveEjKxatJ2u9PVN60TRTlCupEo8XWUE="
+    - secure: GscXN20tOPipggeYpIHe7aE/lW/adWDFk2D+o2uChBqpos8WESUNjKQQzQOVSlEAbAdu1+31PV7xhAog/5IXgYJj6KG0qrbtB0k3sAaxUJ8fJFXjZ84nA+PYZz2DhwRYByrVh/wWyzU34VPirBbGfKyCTU/1rXolaBgXUoSYA5iYfgqY0e0b9f0rTIqWIaJA5p36y+vlCGNN14ZICJNTKZJnwAat0GR1dAMxIlcgZlP39e2p4n+Gc11XxtPpSN1B6PGiTMNUc/Rki3bn+f5Wg7x/crJMDCQC53LMnKxC4+VpzwkJfQv/1e8NGpzqTgdLkybeirkYdHOadBnvCyHN6n9+KZ0NF2aOZ7JOUH9hAd1eEAKePl9jCObzbR9sSr3I/+/uSe1YsLtYXawbgAn3iNvtRDdJbKCQFeXblSxzJd7ssk8WXgtUglVQGeaFOHHHAtVNdjVsuJQtCJ4B7Ny+U12GIEj9bbve4QkVyLp9YrJgv9JZPrbgEglerh23AJXF/7RMiEyJZK2vi+XGFLvBm4R5lMSW/aX8v7W9DAJ5wfNd0MqFg2T5BjSEGkKUdxqra860cmlXed/w42KTiG9+brwnSdI7xF71GOhVFvqOYJ1Fu8LczG7YJwMjvCTliT/8ry610brBE4nRhgJuWGB1pgEcv1I1CFGTgtdC8Q72XnM=
 
 before_install:
   # git config
