@@ -13,15 +13,15 @@ env:
 
 before_install:
   # git config
-  - git config --global user.email ${GIT_EMAIL}
-  - git config --global user.name ${GIT_NAME}
+  - git config --global user.email "$GIT_EMAIL"
+  - git config --global user.name "$GIT_NAME"
   - git config --global push.default simple
   # go dependencies
   - GO111MODULE=on go get github.com/gohugoio/hugo
 
 before_script:
   # git
-  - git clone "https://github.com/${GITHUB_REPO}.git" --branch gh-pages public
+  - git clone "https://github.com/$GITHUB_REPO.git" --branch gh-pages public
 
 script: hugo
 
@@ -30,7 +30,7 @@ after_success:
   - git add --all
   - git commit -m "Publishing to gh-pages from Travis `date`"
   - cd ..
-  - git push --force --quiet "https://${GIT_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" origin gh-pages
+  - git push --force --quiet "https://$GIT_USER:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
 
 branches:
   only:
