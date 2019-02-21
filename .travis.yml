@@ -9,15 +9,21 @@ env:
     - secret: "adCJp+r8zduEtLwsZSBDgdQb5i8WkNXsh7M+y2OhIgTmSqBkM3VaNqojnOWzHhRfRtz+Rwy2rawJYzDA7NESghtYvRx93MG8VXOIqRY1fdAvN8HFeZygvzMh9SQ58I+QRhzFO+vtL49fTA9aT/aPcANfWKseFBaxUUudtQq4a4rNWW4fpfVpgiGX7HIEI9rx5VDb7wYplPeB4KpnlTWFku0uNcLYmVrk1GY+Vq7UZCVQ7xpIJ/CfKPMCtq2knKnDcqf03/fgoC5oFNDYPlen7LJV1DAdnpePoUXp/LxUJDm2ZEchwuGSop/Kit1/sm3DVhvvoR3spEvx0EMZ6BEYY8zqrpUsd703ng6VOAJbstSgWb0hKR++Cc/ngFlDhj2QLTKY3T+6o4Ff/0zqeHwpjKOO0k5R0O4wbLLC9RibhTuTr2cxj+UxTjwgjRKtgxJZDlD9Nve3GVvSiwwrTxtsZdOak3QNPbINPGyjIJ8bW1R0Xi/ylGqDiTmzYiu9pRy6eeZW/3T8tYe1i9qyjs+/TWXmLuB8mbv1wHzmji+e4p7ChwrfwHkQog75WXKPM8XEdw12Gr6vHmNPcLrUbetu7tkDVAxBcyxO9z7u7KCvJiRqvzAHt+GYm+jNnjQ4hDR4CI7anUAu4tRqveEjKxatJ2u9PVN60TRTlCupEo8XWUE="
 
 before_install:
-  # git worktree
-  - git worktree add -B gh-pages public origin/gh-pages
-  # go dependencies
-  - go mod download
-
-scripts:
+  # git config
   - git config --global user.email "$GIT_EMAIL"
   - git config --global user.name "$GIT_NAME"
   - git config --global push.default simple
+  # go dependencies
+  - go mod download
+
+before_script:
+  # git
+  - git clone "https://github.com/${GITHUB_REPO}.git"
+  - cd blog
+  # git worktree
+  - git worktree add -B gh-pages public origin/gh-pages
+
+scripts:
   - hugo
 
 after_success:
@@ -25,7 +31,7 @@ after_success:
   - git add --all
   - git commit -m "Publishing to gh-pages `date`"
   - cd ..
-  - git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" origin gh-pages > /dev/null 2>&1
+  - git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" origin gh-pages > /dev/null 2>&1
 
 branches:
   only:
