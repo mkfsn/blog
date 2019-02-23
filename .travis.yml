@@ -26,10 +26,11 @@ before_script:
 script: hugo
 
 after_success:
-  - cd public
-  - git add --all
-  - git commit -m "Publishing to gh-pages from Travis `date`"
-  - git push --force --quiet "https://$GIT_USER:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
+  - cd public && 
+    pwd &&
+    git add --all && 
+    git commit -m "Publishing to gh-pages from Travis `date`" &&
+    git push --force --quiet "https://$GIT_USER:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
 
 branches:
   only:
