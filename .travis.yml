@@ -29,9 +29,7 @@ after_success:
   - cd public
   - git add --all
   - git commit -m "Publishing to gh-pages from Travis `date`"
-  - ls -al
-  - git log --stat | cat
-  - git push --force --quiet "https://$GIT_USER:$GITHUB_TOKEN@github.com/$GITHUB_REPO.git" origin gh-pages
+  - git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_REPO.git"
 
 branches:
   only:
