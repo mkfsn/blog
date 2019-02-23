@@ -1,0 +1,37 @@
+language: go
+
+os:
+  - linux
+
+go:
+  - '1.11'
+
+env:
+  global:
+    - secure: ZjlOeR0mDbhzfIlRpzxxxzaMOqCs5aaMLwDrCGXqlD2e/ZRHut48PZjrIEqTZj9qb9YoT6/t2LYhPwLyHBeBatusRFzBeZdgDhaFTZIOz1dpurbYForTpGIuvO+17PyMJeRaVbrWeh9lZecUwgBiLHNp2r3h0f1lnKdZhQsk0VoBSiz/Mw9m02bcBVx7e3HTcAGDJGf7axZRJ3CpmWi6b2WCuZerYFKx066k7yIA+NeVC/nELbVVq2LCYBewea+GW6K5m705Enb80jOei5dMkXZo7jzhOBLdw4fy6a2Fp0eLOKkVnM/WarEtIfurmqZolI6XMkMo5MZErtqeaC2mljFsqPNeJAwRYaMkCr9v9rxZCncCImOSgt1nlMtBYuH7Pt8h2jCZnCA7evX+UZxX7vXXav3/w/m870NjjC+/dKweOxUdgD+x7rUerGQTwzNPSIKGTDQoLa6hBdcwjaF+jJxMoiLsvQvfw7kumOPEcCqoMlPPvE725p/3En/2E8hjppH9Exy72KA9sMUHUSHk+YpwKCRo+USfX3ZUL04pYcuBGJYFN5Lnc3z57bR3XFvzaFXEb2xuFh2+T3s/I7W/7K/1Jbi/gan2cepcyZ1w3nkdu8gQdAb60WRpnxEA17FCp7Xa2h5eFhgt3Rv1Q65H+lZsznlFsPckDXskqnHzouU=
+    - GITHUB_REPO=$GIT_USER/$GIT_REPO
+
+before_install:
+  # git config
+  - git config --global user.email "$GIT_EMAIL"
+  - git config --global user.name "$GIT_NAME"
+  - git config --global push.default simple
+  # go dependencies
+  - GO111MODULE=on go get github.com/gohugoio/hugo
+
+before_script:
+  # git
+  - git clone --branch=gh-pages https://github.com/$GIT_USER/$GIT_REPO public
+
+script: hugo
+
+after_success:
+  - cd public
+  - git add --all
+  - git commit -m "Publishing to gh-pages from Travis `date`"
+  - git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_REPO.git"
+
+branches:
+  only:
+    - hugo
+    - travis
