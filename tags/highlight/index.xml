@@ -18,9 +18,7 @@
       
       <guid>https://mkfsn.github.io/blog/2018/08/tranquilpeak-%E4%B8%BB%E9%A1%8C%E4%B8%AD-golang-%E6%B2%92%E6%9C%89-highlight/</guid>
       <description>&lt;p&gt;身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
-tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。&lt;/p&gt;</description>
     </item>
     
   </channel>
