@@ -33,6 +33,14 @@ module.exports = {
           link: 'https://github.com/mkfsn',
         },
         {
+          type: 'gitlab',
+          link: 'https://gitlab.com/mkfsn',
+        },
+        {
+          type: 'linkedin',
+          link: 'https://linkedin.com/in/mkfsn',
+        },
+        {
           type: 'twitter',
           link: 'https://twitter.com/mkfsn',
         },
@@ -53,6 +61,13 @@ module.exports = {
     sitemap: {
       hostname: "https://mkfsn.github.io/blog/",
     },
+    feed: {
+      canonical_base:'https://mkfsn.github.io/blog/',
+      rss: true,
+      atom:true,
+      json: false,
+    },
+    smoothScroll: true,
   },
   markdown: {
     // options for markdown-it-anchor
