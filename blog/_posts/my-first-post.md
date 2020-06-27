@@ -6,12 +6,11 @@ tags:
 - hugo
 - tranquilpeak
 - github
+summary: 最近將服務都移過去 linode 上面，因為受限於選擇的方案儲存空間不夠，所以把腦筋動到 username.github.io 上面
 ---
 
 最近將服務都移過去 linode 上面，因為受限於選擇的方案儲存空間不夠，所以把腦筋動到
-`username`.github.io 上面 ...
-
-<!--more-->
+`username`.github.io 上面。
 
 之前有玩過一些 static site generator，像是
 
@@ -20,7 +19,7 @@ tags:
 
 不過最近發現滿多人在用 go base 的 [hugo](https://gohugo.io/)，於是就來嘗試看看。
 
-# Github Page
+## Github Page
 
 這次的目標是要把 blog 架設到 https://mkfsn.github.io/blog/ ，換句話說是要部署到
 **blog** 這個 repo 的 project page，所以就先來建立 local 的 repo.
@@ -36,7 +35,7 @@ $ echo "# mkfsn.github.io/blog" > README.md
 $ git commit -m "init: blog repo."
 ```
 
-# Repository Branches
+## Repository Branches
 
 因為 github 預設的 branch 是 master (當然可以改，但還是需要一個介紹的 branch)，
 所以我打算開一些 branch 做不同的用途：
@@ -51,7 +50,7 @@ master branch 就不多做描述，先切到 hugo branch 來開始正題吧。
 $ git ch --orphan hugo
 ```
 
-# Install Hugo
+## Install Hugo
 
 在 macOS 上面安裝很簡單：
 
@@ -59,7 +58,7 @@ $ git ch --orphan hugo
 $ brew install hugo
 ```
 
-## Hugo New Site
+### Hugo New Site
 
 在 hugo branch 我們要忽略 public 這個資料夾的所有東西
 
@@ -101,7 +100,7 @@ $ tree
 
 ~~當然之後會把這些資料夾填好填滿。~~
 
-# Hugo Theme
+## Hugo Theme
 
 hugo 有許多主題可以用，可以從這邊去挑一個你喜歡的： https://themes.gohugo.io/
 
@@ -120,7 +119,7 @@ $ cp themes/hugo-tranquilpeak-theme/exampleSite/config.toml ./
 $ vim config.toml
 ```
 
-## baseURL
+### baseURL
 
 那因為我是要部署到 mkfsn.github.io/blog (注意：後面有個 /blog) config.toml 裡面
 的 `baseURL` 也要記得在最後面加上 /blog，像這樣：
@@ -129,7 +128,7 @@ $ vim config.toml
 baseURL = "https://mkfsn.github.io/blog/"
 ```
 
-## coverImage
+### coverImage
 
 tranquilpeak 主題中要說我最看不順眼的，就是他預設的黃色主題（不喜歡黃色 XD），所
 以當然是要來修改一下：
@@ -154,7 +153,7 @@ $ mv /path/to/my/cover.jpg static/images/cover.jpg
 
 > 其他的設定就自己摸索吧 :P
 
-# Hugo New Post
+## Hugo New Post
 
 設定檔修改完以後，就可以來寫文章囉～
 
@@ -172,7 +171,7 @@ $ hugo server -D
 
 恰啦～到這一步已經完成一大半了，剩下把靜態頁面推到 github 就完成了。
 
-# Git Commit / Git Push
+## Git Commit / Git Push
 
 做了這麼多，最重要的當然是先來 commit 一下所有的修改。
 
@@ -188,7 +187,7 @@ $ git push origin master
 $ git push origin hugo
 ```
 
-# Publish
+## Publish
 
 master/hugo branch 的管理我就不多加描述，因為重點是要怎麼 publish 我的文章到
 mkfsn.github.io/blog。

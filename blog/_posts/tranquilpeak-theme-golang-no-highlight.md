@@ -6,6 +6,7 @@ tags:
 - hugo
 - tranquilpeak
 - highlight
+summary: 身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到 tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。
 ---
 
 身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
@@ -32,7 +33,7 @@ https://highlightjs.org/download/
 
 所幸 tranquilpeak 有方法可以去載入其他 JavaScript
 
-# params.customJS
+## params.customJS
 
 在 config.toml 裡面，有提供 params.customJS 可以去 import 額外的 JavaScript，可
 以是 CDN 的 URL，也可以是 static folder 中的 local file。
@@ -64,7 +65,7 @@ $ wget https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/scss.
     src = "js/highlight.js/9.4.0/languages/scss.min.js"
 ```
 
-# 成果
+## 成果
 
 ```go
 package main

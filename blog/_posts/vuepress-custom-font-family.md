@@ -7,6 +7,7 @@ tags:
 - vuepress
 - theme-blog
 - font-family
+summary: 從 hugo 換成 vuepress 之後，雖然主題好看多了，字型卻不甚滿意。
 ---
 
 從 hugo 換成 vuepress 之後，雖然主題好看多了，字型卻不甚滿意。

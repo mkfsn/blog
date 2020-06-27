@@ -1,14 +1,26 @@
 ---
-title: "TIL: Golang Generics 20200616 更新"
+title: "TIL: Golang Generic 20200616 更新"
 date: 2020-06-27T17:40:59+08:00
 author: mkfsn
 description: "test"
 tags:
 - golang
 - generic-programming
+summary: 官方在 2020/06/16 發佈了關於 Generic Programming 的一個新的 draft。
 ---
 
-# 為什麼需要 Generic Programming
+## 前言
+
+早在 2016 年，Golang 就有關於 generic programming 的討論： https://github.com/golang/go/issues/15292.
+
+在[上一個版本的 draft](https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-contracts.md) 中，
+有提出一個新的 keyword [contract](https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-contracts.md#type-contracts) ，
+而最近在 2020/06/16 這天又發佈的一個[更新](https://blog.golang.org/generics-next-step) ，
+看起來最後因為 contract 跟 type 的重疊性太高，於是就把 contract 拿掉了。
+
+但這次更新不僅如此，還提供了一個 [playground](https://go2goplay.golang.org/) 讓我們可以~~隨便玩~~體驗一下 Golang 的 Generic Programming。
+
+## 為什麼需要 Generic Programming
 
 在現在 golang 的任何一個版本中 (<= 1.14)，如果我要『取得兩個整數中最小的那一個』，我可以寫一個 function：
 
@@ -61,18 +73,9 @@ func minFloat64(x, y float64) float64 {
 
 ... 應該沒人會想要每一個 type 都寫一個 function 吧？
 
-# Golang Generic Programming
+## Golang Generic Programming
 
-早在 2016 年，Golang 就有關於 generic programming 的討論：https://github.com/golang/go/issues/15292.
-
-在[上一個版本的 draft](https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-contracts.md) 中，
-有提出一個新的 keyword [contract](https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-contracts.md#type-contracts) ，
-而最近在 2020/06/16 這天又發佈的一個[更新](https://blog.golang.org/generics-next-step) ，
-看起來最後因為 contract 跟 type 的重疊性太高，於是就把 contract 拿掉了。
-
-但這次更新不僅如此，還提供了一個 [playground](https://go2goplay.golang.org/) 讓我們可以~~隨便玩~~體驗一下 Golang 的 Generic Programming。
-
-以一開始提到的『取得兩個整數中最小的那一個』為例，在 go2 我們可以這樣做：
+以剛剛提到的『取得兩個整數中最小的那一個』為例，在 go2 我們(希望)可以這樣做：
 
 ```go
 package main
@@ -112,7 +115,7 @@ func main() {
 
 如此一來，就可以只寫一個 function 然後可以傳入不同的 type。
 
-# Anonymous function
+## Anonymous function
 
 自己在玩的時候發現好像 anonymous function 似乎沒辦法使用 generic，
 我把上面的 code 改成用 anonymous function 之後就 build 不了，
