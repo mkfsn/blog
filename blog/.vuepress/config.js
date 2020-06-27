@@ -44,5 +44,20 @@ module.exports = {
         },
       ],
     },
+    comment: {
+      // Which service you'd like to use
+      service: 'disqus',
+      // The owner's name of repository to store the issues and comments.
+      shortname: 'mkfsn',
+    },
+    sitemap: {
+      hostname: "https://mkfsn.github.io/blog/",
+    },
+  },
+  markdown: {
+    // options for markdown-it-anchor
+    anchor: { permalink: false },
+    // options for markdown-it-toc
+    toc: { includeLevel: [1, 2] },
   },
 }
