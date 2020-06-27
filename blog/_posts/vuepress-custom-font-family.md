@@ -2,7 +2,6 @@
 title: "在 vuepress 中使用自訂字型"
 date: 2020-06-27T11:43:05+08:00
 author: mkfsn
-description: "test"
 tags:
 - vuepress
 - theme-blog
