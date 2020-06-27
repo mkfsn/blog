@@ -1,6 +1,7 @@
 module.exports = {
   title: "mkfsn's Blog",
   description: '',
+  base: '/blog/',
   theme: '@vuepress/theme-blog', // OR shortcut: @vuepress/blog
   themeConfig: {
     /**
