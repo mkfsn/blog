@@ -4,7 +4,7 @@
         <title>mkfsn&apos;s Blog</title>
         <link>https://mkfsn.github.io/blog/</link>
         <description></description>
-        <lastBuildDate>Sat, 27 Jun 2020 14:34:55 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Jul 2020 01:44:51 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://mkfsn.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
@@ -21,6 +21,13 @@
             <guid>https://mkfsn.github.io/blog/2019/02/23/pure-css-counter-for-ptt-reply/</guid>
             <pubDate>Sat, 23 Feb 2019 11:36:19 GMT</pubDate>
             <description><![CDATA[PTT 的網頁版在回文是沒有顯示幾樓的，所以就把腦筋動到瀏覽器擴充元件上，但是在想有沒有純 CSS 的作法呢？]]></description>
+        </item>
+        <item>
+            <title><![CDATA[TIL: 用 includeIf 對不同 repo 設定 commit author]]></title>
+            <link>https://mkfsn.github.io/blog/2020/07/17/til-git-includeif-configure-commit-author/</link>
+            <guid>https://mkfsn.github.io/blog/2020/07/17/til-git-includeif-configure-commit-author/</guid>
+            <pubDate>Fri, 17 Jul 2020 01:23:59 GMT</pubDate>
+            <description><![CDATA[在 Twitter 上看到朋友在討論 git commit author，發現原來我自己也是公私混用，公司的 repo 還是設定我自己個人的 email (驚)。]]></description>
         </item>
         <item>
             <title><![CDATA[TIL: Go HTTP client reuse connection]]></title>
