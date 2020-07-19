@@ -2,10 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkfsn.github.io/blog/</id>
     <title>mkfsn&apos;s Blog</title>
-    <updated>2020-07-17T01:44:51.348Z</updated>
+    <updated>2020-07-19T14:00:30.058Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://mkfsn.github.io/blog/"/>
     <link rel="self" href="https://mkfsn.github.io/blog/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[用 Github Actions 幫你的 Go Repository 加上 Codecov]]></title>
+        <id>https://mkfsn.github.io/blog/2020/07/19/add-codecov-to-your-go-repository-by-github-actions/</id>
+        <link href="https://mkfsn.github.io/blog/2020/07/19/add-codecov-to-your-go-repository-by-github-actions/">
+        </link>
+        <updated>2020-07-19T13:05:53.000Z</updated>
+        <summary type="html"><![CDATA[Codecov 是一個服務可以幫你把 coverage report 加到 Github 上面，這邊利用 Github Actions 來對每個 Pull Request 都加上 Codecov 的比較結果。]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[用 Hugo 來架設部落格並部署到 Github Pages]]></title>
         <id>https://mkfsn.github.io/blog/2018/08/19/my-first-post/</id>

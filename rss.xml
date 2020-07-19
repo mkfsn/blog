@@ -4,10 +4,19 @@
         <title>mkfsn&apos;s Blog</title>
         <link>https://mkfsn.github.io/blog/</link>
         <description></description>
-        <lastBuildDate>Fri, 17 Jul 2020 01:44:51 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 19 Jul 2020 14:00:30 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://mkfsn.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[用 Github Actions 幫你的 Go Repository 加上 Codecov]]></title>
+            <link>https://mkfsn.github.io/blog/2020/07/19/add-codecov-to-your-go-repository-by-github-actions/</link>
+            <guid>https://mkfsn.github.io/blog/2020/07/19/add-codecov-to-your-go-repository-by-github-actions/</guid>
+            <pubDate>Sun, 19 Jul 2020 13:05:53 GMT</pubDate>
+            <description><![CDATA[Codecov 是一個服務可以幫你把 coverage report 加到 Github 上面，這邊利用 Github Actions 來對每個 Pull Request 都加上 Codecov 的比較結果。]]></description>
+            <enclosure url="https://user-images.githubusercontent.com/667169/87875799-64530b80-ca06-11ea-888f-dc76cf265784.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[用 Hugo 來架設部落格並部署到 Github Pages]]></title>
             <link>https://mkfsn.github.io/blog/2018/08/19/my-first-post/</link>
