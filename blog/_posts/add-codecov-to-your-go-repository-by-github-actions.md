@@ -34,7 +34,7 @@ Codecov 有提供 [Github Action](https://github.com/codecov/codecov-action) 讓
 
 > 更多詳細設定可以看 [https://github.com/codecov/codecov-action#arguments](https://github.com/codecov/codecov-action#arguments)
 
-要注意的是，這邊的 `${{secrets.CODECOV_TOKEN}}` 必須先去 codecov 的設定頁面找到你 repository 的 token:
+要注意的是，這邊的 `secrets.CODECOV_TOKEN` 必須先去 codecov 的設定頁面找到你 repository 的 token:
 
 ![image](https://user-images.githubusercontent.com/667169/87875799-64530b80-ca06-11ea-888f-dc76cf265784.png)
 
