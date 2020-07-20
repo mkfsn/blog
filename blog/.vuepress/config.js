@@ -75,4 +75,12 @@ module.exports = {
     // options for markdown-it-toc
     toc: { includeLevel: [1, 2] },
   },
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-124207676-2'
+      }
+    ]
+  ]
 }
