@@ -4,7 +4,7 @@
         <title>mkfsn&apos;s Blog</title>
         <link>https://mkfsn.github.io/blog/</link>
         <description></description>
-        <lastBuildDate>Mon, 20 Jul 2020 10:39:01 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 20 Jul 2020 11:36:43 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://mkfsn.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
