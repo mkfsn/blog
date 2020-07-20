@@ -75,29 +75,12 @@ module.exports = {
     // options for markdown-it-toc
     toc: { includeLevel: [1, 2] },
   },
-  head: [
+  plugins: [
     [
-      'script',
+      '@vuepress/google-analytics',
       {
-        async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=UA-124207676-2',
+        'ga': 'UA-124207676-3'
       }
-    ],
-    [
-      'script',
-      {},
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-124207676-2', {'page_path': '/blog'});`
     ]
   ]
-  // plugins: [
-  //   [
-  //     '@vuepress/google-analytics',
-  //     {
-  //       'ga': 'UA-124207676-3'
-  //     }
-  //   ]
-  // ]
 }
