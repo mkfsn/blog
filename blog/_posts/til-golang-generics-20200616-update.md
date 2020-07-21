@@ -2,12 +2,16 @@
 title: "TIL: Golang Generic 20200616 更新"
 date: 2020-06-27T17:40:59+08:00
 author: mkfsn
-description: "test"
+categories:
+- technology
 tags:
-- golang
-- generic-programming
-summary: 官方在 2020/06/16 發佈了關於 Generic Programming 的一個新的 draft。
+- go
+- generic programming
 ---
+
+官方在 2020/06/16 發佈了關於 Generic Programming 的一個新的 draft。
+
+<!-- more -->
 
 ## 前言
 

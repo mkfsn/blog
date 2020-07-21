@@ -2,15 +2,18 @@
 title: "TIL: 用 includeIf 對不同 repo 設定 commit author"
 date: 2020-07-17T09:23:59+08:00
 author: mkfsn
+categories:
+- technology
 tags:
 - git
 - includeIf
-summary: 在 Twitter 上看到朋友在討論 git commit author，發現原來我自己也是公私混用，公司的 repo 還是設定我自己個人的 email (驚)。
 ---
 
 ## 前言
 
 在 Twitter 上看到朋友在討論 git commit author，發現原來我自己也是公私混用，公司的 repo 還是設定我自己個人的 email (驚)。
+
+<!-- more -->
 
 公司的 repo 還是應該要用公司的 email 比較恰當，但是又不想要每一個 repo 一個一個設定 ... 雖然公司的 repo 不多，但我就是懶嘛。
 

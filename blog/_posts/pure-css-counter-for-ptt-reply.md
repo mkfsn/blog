@@ -2,12 +2,15 @@
 title: "純 CSS 顯示 PTT 網頁版樓層"
 date: 2019-02-23T19:36:19+08:00
 author: mkfsn
+categories:
+- technology
 tags:
 - css
-summary: PTT 的網頁版在回文是沒有顯示幾樓的，所以就把腦筋動到瀏覽器擴充元件上，但是在想有沒有純 CSS 的作法呢？
 ---
 
 PTT 的網頁版在回文是沒有顯示幾樓的，所以就把腦筋動到瀏覽器擴充元件上，但是在想有沒有純 CSS 的作法呢？
+
+<!-- more -->
 
 於是就找到了 CSS 的 Counter。
 

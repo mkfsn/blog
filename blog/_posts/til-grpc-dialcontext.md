@@ -2,12 +2,17 @@
 title: "TIL: gRPC DialContext"
 date: 2019-12-11
 author: mkfsn
+categories:
+- technology
 tags:
-- golang
+- go
 - gRPC
 - context
-summary: 最近遇到最大的一個問題，大到我想來寫下來紀錄一下
 ---
+
+最近遇到最大的一個問題，大到我想來寫下來紀錄一下
+
+<!-- more -->
 
 ## 問題
 

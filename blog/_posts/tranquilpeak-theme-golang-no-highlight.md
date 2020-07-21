@@ -2,17 +2,18 @@
 title: "tranquilpeak 主題中 Golang 沒有 Highlight"
 date: 2018-08-19T16:36:19+08:00
 author: mkfsn
+categories:
+- technology
 tags:
 - hugo
 - tranquilpeak
 - highlight
-summary: 身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到 tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。
 ---
 
 身為一個工程師，寫部落格文章最重要當然是要可以 highlight 程式碼，但沒想到
 tranquilpeak 主題中使用的 highlight.js 竟然預設沒有把 golang 包進來。
 
-<!--more-->
+<!-- more -->
 
 tranquilpeak 中 highlight 的方式有兩種：
 

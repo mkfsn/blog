@@ -2,16 +2,20 @@
 title: "TIL: Go HTTP client reuse connection"
 date: 2019-12-14
 author: mkfsn
+categories:
+- technology
 tags:
-- golang
+- go
 - http
-- http client
-- http request
 - race condition
-summary: I was recently working on a weird problem related to the build-in net/http package.
 ---
 
+I was recently working on a weird problem related to the build-in net/http package.
+
+<!-- more -->
+
 ## How to reuse HTTP client’s connection?
+
 
 As described in [godoc](https://godoc.org/net/http#Client.Do), by default the http.Client would reuse the TCP connection,
 but only if you read all the data from the http.Response Body and close the http.Response Body as well:

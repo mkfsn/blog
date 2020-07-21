@@ -2,15 +2,18 @@
 title: "用 Hugo 來架設部落格並部署到 Github Pages"
 date: 2018-08-19T15:25:40+08:00
 author: mkfsn
+categories:
+- technology
 tags:
 - hugo
 - tranquilpeak
 - github
-summary: 最近將服務都移過去 linode 上面，因為受限於選擇的方案儲存空間不夠，所以把腦筋動到 username.github.io 上面
 ---
 
 最近將服務都移過去 linode 上面，因為受限於選擇的方案儲存空間不夠，所以把腦筋動到
 `username`.github.io 上面。
+
+<!-- more -->
 
 之前有玩過一些 static site generator，像是
 

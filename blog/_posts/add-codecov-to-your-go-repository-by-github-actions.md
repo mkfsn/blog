@@ -2,14 +2,17 @@
 title: 用 Github Actions 幫你的 Go Repository 加上 Codecov
 date: 2020-07-19T21:05:53+08:00
 author: mkfsn
+categories:
+- technology
 tags:
 - github actions
 - codecov
 - go
-summary: Codecov 是一個服務可以幫你把 coverage report 加到 Github 上面，這邊利用 Github Actions 來對每個 Pull Request 都加上 Codecov 的比較結果。
 ---
 
 [Codecov](https://codecov.io) 是一個服務可以幫你把 coverage report 加到 Github 上面，這篇將利用 [Github Actions](https://github.com/features/actions) 來對每個 Pull Request 都加上 Codecov 的比較結果。
+
+<!-- more -->
 
 在寫 go 的時候可以利用 `go test` 來看 coverage 也可以產生一個 report 檔案：
 

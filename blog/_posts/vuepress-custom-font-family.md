@@ -2,14 +2,17 @@
 title: "在 vuepress 中使用自訂字型"
 date: 2020-06-27T11:43:05+08:00
 author: mkfsn
+categories:
+- technology
 tags:
 - vuepress
 - theme-blog
 - font-family
-summary: 從 hugo 換成 vuepress 之後，雖然主題好看多了，字型卻不甚滿意。
 ---
 
 從 hugo 換成 vuepress 之後，雖然主題好看多了，字型卻不甚滿意。
+
+<!-- more -->
 
 使用 `@vuepress/theme-blog` 主題時，預設的字體是 `PT Serif, Serif`，
 
