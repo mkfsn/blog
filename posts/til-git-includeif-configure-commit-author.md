@@ -23,7 +23,7 @@ tags:
 
 那麼要怎麼設定 gitdir 呢？我的情況是我把公司的 repo 都放在 `~/Workspace/Glasnostic/src` 底下，所以在 `~/.gitconfig` 裡面可以這樣設定
 
-```inc
+```
 [user]
 	name = Pei-Ming Wu
 	email = _foo_@gmail.com
@@ -34,7 +34,7 @@ tags:
 
 然後在 `~/.gitconfig-glasnostic` 就可以設定不同的 user.name/user.email:
 
-```inc
+```
 [user]
 	name = Pei-Ming Wu
 	email = _bar_@glasnostic.com
