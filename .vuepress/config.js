@@ -8,7 +8,8 @@ module.exports = {
     // Ref: https://vuepress-theme-reco.recoluan.com/en/views/1.x/timeline.html#add-navigation-button
     nav: [
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-      { text: 'Github', link: 'https://github.com/mkfsn/blog', icon: 'reco-github' }
+      { text: 'Github', link: 'https://github.com/mkfsn/blog', icon: 'reco-github' },
+      { text: "RSS", link: "https://mkfsn.github.io/blog/rss.xml", icon: "reco-rss" },
     ],
     // Ref: https://vuepress-theme-reco.recoluan.com/en/views/1.x/blog.html#add-blog-configurations
     blogConfig: {
@@ -35,10 +36,9 @@ module.exports = {
   },
   plugins: [
     [
-      'vuepress-plugin-rss',
+      '@vuepress-reco/vuepress-plugin-rss',
       {
-        'site_url': 'https://mkfsn.github.io/blog',
-        'copyright': 'mkfsn',
+        'site_url': 'https://mkfsn.github.io/blog'
       }
     ],
     [
