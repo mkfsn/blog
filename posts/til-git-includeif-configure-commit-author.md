@@ -9,8 +9,6 @@ tags:
 - includeIf
 ---
 
-## 前言
-
 在 Twitter 上看到朋友在討論 git commit author，發現原來我自己也是公私混用，公司的 repo 還是設定我自己個人的 email (驚)。
 
 <!-- more -->
