@@ -8,11 +8,12 @@ module.exports = {
     tags: true,
     // Ref: https://vuepress-theme-reco.recoluan.com/en/views/1.x/timeline.html#add-navigation-button
     nav: [
-      { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' }
+      { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
+      { text: 'Github', link: 'https://github.com/mkfsn/blog', icon: 'reco-github' }
     ],
     blogConfig: {
-      category: {location: 2, text: "Category"},
-      tag: {location: 3, text: "Tag"}
+      category: {location: 1, text: "Category"},
+      tag: {location: 2, text: "Tag"}
     },
   },
   markdown: {
