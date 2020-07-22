@@ -17,8 +17,9 @@ module.exports = {
     },
     // Ref: https://vuepress-theme-reco.recoluan.com/en/views/1.x/home.html#home-blog
     authorAvatar: '/avatar.png',
+    // Ref: https://vuepress-theme-reco.recoluan.com/en/views/plugins/comments.html#vssue
     vssueConfig: {
-      platform: 'github',
+      platform: 'github-v4',
       owner: 'mkfsn',
       repo: 'blog',
       clientId: '40db6d894d0b269cdc46',
