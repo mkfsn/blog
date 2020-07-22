@@ -35,6 +35,13 @@ module.exports = {
   },
   plugins: [
     [
+      'vuepress-plugin-rss',
+      {
+        'site_url': 'https://mkfsn.github.io/blog',
+        'copyright': 'mkfsn',
+      }
+    ],
+    [
       '@vuepress/google-analytics',
       {
         'ga': 'UA-124207676-3'
