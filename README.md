@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: null
-heroText: ""
+heroText: " "
 description: " "
+bgImage: /bg.jpg
 ---
