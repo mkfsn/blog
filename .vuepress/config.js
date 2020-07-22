@@ -17,6 +17,13 @@ module.exports = {
     },
     // Ref: https://vuepress-theme-reco.recoluan.com/en/views/1.x/home.html#home-blog
     authorAvatar: '/avatar.png',
+    vssueConfig: {
+      platform: 'github',
+      owner: 'mkfsn',
+      repo: 'blog',
+      clientId: '40db6d894d0b269cdc46',
+      clientSecret: '64fd0051be380c1c7bbc5b4da8e9925d38657b27',
+    }
   },
   markdown: {
     // options for markdown-it-anchor
