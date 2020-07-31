@@ -1,11 +1,13 @@
 ---
 title: "在 LinkIt™ Smart 7688 Duo 寫 Go"
-date: 2020-07-31T08:10:003+08:00
+date: 2020-07-31T08:10:03+08:00
 author: mkfsn
 categories:
 - technology
 tags:
 - go
+- openwrt
+- mips
 ---
 
 很久之前買了一塊 [linkit smart 7688 duo](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/get-started/get-started-with-the-linkit-smart-7688-duo-development-board)
