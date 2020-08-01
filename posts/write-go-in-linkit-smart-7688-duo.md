@@ -8,6 +8,7 @@ tags:
 - go
 - openwrt
 - mips
+- linkit-smart-7688-duo
 ---
 
 很久之前買了一塊 [linkit smart 7688 duo](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/get-started/get-started-with-the-linkit-smart-7688-duo-development-board)
