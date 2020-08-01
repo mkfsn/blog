@@ -151,7 +151,9 @@ firmataAdaptor := firmata.NewAdaptor("/dev/ttyS0")
 而 Pin 的部分則根據[官方圖所示](https://s3-ap-southeast-1.amazonaws.com/mediatek-labs-imgs/downloads/d0846032988f44428f790eb930f7e78c.pdf)
 ，都是 13 所以不用變動。
 
-> 我把範例稍微修改過後放到 https://github.com/mkfsn/linkit-lab，有興趣的話可以參考看看。
+::: tips
+我把範例稍微修改過後放到 https://github.com/mkfsn/linkit-lab，有興趣的話可以參考看看。
+:::
 
 ### 執行結果
 
