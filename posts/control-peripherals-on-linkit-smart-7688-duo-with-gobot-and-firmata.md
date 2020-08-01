@@ -12,7 +12,7 @@ tags:
 - linkit-smart-7688-duo
 ---
 
-在[上一篇](/blog/posts/write-go-in-linkit-smart-7688-duo.html)嘗試使用 go 在 LinkIt™ Smart 7688 Duo 開發之後，這篇要來嘗試如何控制週邊設備，例如 LED 或者其他模組。
+在[上一篇](/posts/write-go-in-linkit-smart-7688-duo.html)嘗試使用 go 在 LinkIt™ Smart 7688 Duo 開發之後，這篇要來嘗試如何控制週邊設備，例如 LED 或者其他模組。
 
 <!-- more -->
 
@@ -147,7 +147,7 @@ firmataAdaptor := firmata.NewAdaptor("/dev/ttyS0")
 
 ### 執行結果
 
-照 [上一篇](/blog/posts/write-go-in-linkit-smart-7688-duo.html) 的步驟 build 完以後，透過 scp 上傳到板子上執行的結果如下：
+照 [上一篇](/posts/write-go-in-linkit-smart-7688-duo.html) 的步驟 build 完以後，透過 scp 上傳到板子上執行的結果如下：
 
 ```bash
 root@mylinkit:~# ./linkit-lab 
