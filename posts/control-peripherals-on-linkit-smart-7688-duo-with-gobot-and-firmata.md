@@ -73,7 +73,15 @@ Serial1.begin(57600);
 Firmata.begin(Serial1);
 ```
 
-要注意的是，除了更改這幾行以外，下面的 while loop 也要註解掉，否則從 MPU 上面的 process 會遇到 connection timeout。
+:::warning
+除了更改這幾行以外，下面的 while loop 也要註解掉，否則從 MPU 上面的 process 在嘗試透過 Firmata 連線的時候會遇到 connection timeout。
+:::
+
+```c
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for ATmega32u4-based boards and Arduino 101
+  }
+```
 
 總結來說是這樣：
 
@@ -81,7 +89,7 @@ Firmata.begin(Serial1);
 
 之後就把 StandardFirmata 上傳：
 
-![image](https://user-images.githubusercontent.com/667169/89098681-44ffa980-d41c-11ea-9fca-afcbad86f7fc.png)
+![image](https://user-images.githubusercontent.com/667169/89099374-497a9100-d421-11ea-9593-af52f2f12203.png)
 
 記得要確認 USB 是不是接在板子上的 MCU 那一側，以及下圖的 Board 跟 Port 是否設定正確：
 
