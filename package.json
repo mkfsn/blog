@@ -19,6 +19,17 @@
     "vuepress-theme-reco": "1.5.3"
   },
   "dependencies": {
+    "dns-packet": "^5.4.0",
+    "elliptic": "^6.5.4",
+    "eventsource": "^2.0.2",
+    "ini": "^3.0.1",
+    "minimist": "^1.2.6",
+    "path-parse": "^1.0.7",
+    "postcss": "^8.4.16",
+    "prismjs": "^1.29.0",
+    "ssri": "^9.0.1",
+    "terser": "^5.15.0",
+    "url-parse": "^1.5.10",
     "vue-class-component": "^7.2.3"
   }
 }
