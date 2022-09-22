@@ -6,6 +6,9 @@
     "name": "mkfsn",
     "email": ""
   },
+  "engines" : {
+    "node" : ">=14.0.0"
+  },
   "repository": "/blog",
   "scripts": {
     "dev": "vuepress dev .",
