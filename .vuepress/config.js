@@ -28,6 +28,12 @@ module.exports = {
       autoCreateIssue: true,
     }
   },
+  configureWebpack: {
+    node: {
+      global: true,
+      process: true
+    }
+  },
   markdown: {
     // options for markdown-it-anchor
     anchor: { permalink: false },
