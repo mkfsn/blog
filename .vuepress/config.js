@@ -26,7 +26,8 @@ module.exports = {
       clientId: '40db6d894d0b269cdc46',
       clientSecret: '64fd0051be380c1c7bbc5b4da8e9925d38657b27',
       autoCreateIssue: true,
-    }
+    },
+    subSidebar: 'auto',
   },
   configureWebpack: {
     node: {
@@ -36,9 +37,12 @@ module.exports = {
   },
   markdown: {
     // options for markdown-it-anchor
-    anchor: { permalink: false },
+    anchor: {
+      permalink: true,
+      permalinkBefore: true,
+    },
     // options for markdown-it-toc
-    toc: { includeLevel: [1, 2] },
+    toc: { includeLevel: [2, 3] },
   },
   plugins: [
     [
