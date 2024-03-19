@@ -1,6 +1,9 @@
 ---
 home: true
-heroText: " "
+heroText: null
 description: " "
 bgImage: /bg.jpg
+bgImageStyle: {
+  height: '350px',
+}
 ---
