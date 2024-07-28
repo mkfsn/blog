@@ -52,9 +52,9 @@ module.exports = {
       }
     ],
     [
-      '@vuepress/google-analytics',
+      'google-analytics-4',
       {
-        'id': 'G-3TKFBPJDRN'
+        gtag: 'G-3TKFBPJDRN'
       }
     ]
   ]

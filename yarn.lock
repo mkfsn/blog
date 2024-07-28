@@ -1685,6 +1685,15 @@
     "@types/webpack-dev-server" "^3"
     webpack-chain "^6.0.0"
 
+"@vuepress/types@1.9.9":
+  version "1.9.9"
+  resolved "https://registry.yarnpkg.com/@vuepress/types/-/types-1.9.9.tgz#7c21e4c91c13e58e2ff303ded9ad7425805cb07d"
+  integrity sha512-ukGW49ILzLhIc7CltHMr+BeIjWKloJNN1mrvbDz3beycp9b9kgH+DXNdRIK9QCKr4fJsy7x08vNMwZr9Nq/PTQ==
+  dependencies:
+    "@types/markdown-it" "^10.0.0"
+    "@types/webpack-dev-server" "^3"
+    webpack-chain "^6.0.0"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -9181,6 +9190,13 @@ vuepress-plugin-feed@^0.1.8:
     lodash.trimstart "^4.5.1"
     remove-markdown "0.3.0"
     striptags "3.1.1"
+
+vuepress-plugin-google-analytics-4@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-google-analytics-4/-/vuepress-plugin-google-analytics-4-0.1.1.tgz#8af1aa39d38fac4bc3b9e1f7ec29d3ab0f778f0c"
+  integrity sha512-7zcLXFVDiDN3MW9ASf/RrPq67QWGnYmfMl7+vVBhlr6ocBvV6jPWhVvyU0Iu0bzT9rv2HdEkDkwwsj45310skA==
+  dependencies:
+    "@vuepress/types" "1.9.9"
 
 vuepress-plugin-mailchimp@^1.4.1:
   version "1.4.2"
